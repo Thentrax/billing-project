@@ -1,5 +1,3 @@
-// lib/services/apiService.ts
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
 class ApiService {
   private baseURL: string;
