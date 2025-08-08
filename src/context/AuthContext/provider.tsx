@@ -6,7 +6,7 @@ import { AuthContext } from "./context";
 
 const mockUser: User = {
   id: 1,
-  username: "Thiago Cardoso de Souza Lopes",
+  username: "Thiago Cardoso",
   balance: 1000,
 }
 
