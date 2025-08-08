@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto Financeiro
 
-## Getting Started
+Esse é o resultado do meu primeiro tech challenge da FIAP, o projeto financeiro.
+É um projeto Next com typescript, que utiliza app router e rotas de api, com um BFF integrando ao MongoDB com a lib mongoose.
 
-First, run the development server:
+## Estrutura do projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+├── src/
+│ ├── app/
+│ ├── components/
+│ ├── context/
+│ ├── lib/
+│ ├── models/
+│ ├── services/
+│ ├── types/
+├ └── middleware.ts
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como rodar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Instale as dependências**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+```
 
-## Learn More
+2. **Tenha um projeto cloud MongoDB**
 
-To learn more about Next.js, take a look at the following resources:
+caso não tenha acesse:
+https://cloud.mongodb.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+copie a uri da sua conexão
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+3. **Crie um arquivo .env com a URI do mongoDB na raiz do repositório**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Seu arquivo deve ficar parecido com isso
+```
+MONGODB_URI=mongodb+srv://<username>:<password>@billing-project.ujjvbep.mongodb.net/?retryWrites=true&w=majority&appName=<appName>
+```
+4. **Rodar em um terminal na raiz do repositório**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+bash
+```
+npm run dev
+```
+
+Após isso basta acessar: http://localhost:3000/
